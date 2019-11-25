@@ -7,6 +7,7 @@ pipeline {
         stage('npm build') {
             steps {
                 sh "echo 'npm build'"
+                sh "echo ${env.SDB}"
             }
         }
     }
