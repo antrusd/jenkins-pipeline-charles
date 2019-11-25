@@ -5,22 +5,22 @@ pipeline {
 
     stages {
         stage('checkout repository') {
-            dir ('build') {
-                steps {
+            steps {
+                dir ('build') {
                     echo "git '${SERVICE}'"
                 }
             }
         }
         stage('npm build') {
-            dir ('build') {
-                steps {
+            steps {
+                dir ('build') {
                     sh "echo 'npm build'"
                 }
             }
         }
         stage('gradle build') {
-            dir ('build') {
-                steps {
+            steps {
+                dir ('build') {
                     sh "echo 'gradle build'"
                 }
             }
