@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "master && linux"
+        label "linux"
     }
 
     stages {
