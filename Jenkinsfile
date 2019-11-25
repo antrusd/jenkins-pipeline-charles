@@ -23,7 +23,7 @@ pipeline {
         stage('scratch database') {
             when {
                 expression {
-                    env.ScratchDatabase == true
+                    env.SCRATCH_DATABASE == 'true'
                 }
             }
             steps {
@@ -33,7 +33,7 @@ pipeline {
         stage('copy test database') {
             when {
                 expression {
-                    env.CopyTestData == true
+                    env.COPY_TEST_DATA == 'true'
                 }
             }
             steps {
