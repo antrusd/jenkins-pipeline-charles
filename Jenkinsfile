@@ -3,8 +3,8 @@ pipeline {
         label "linux"
     }
 
-    stages {
-        dir ('build') {
+    dir ('build') {
+        stages {
             stage('checkout repository') {
                 steps {
                     echo "git '${SERVICE}'"
